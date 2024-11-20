@@ -1,0 +1,82 @@
+.messages{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 300px;
+    padding-top: 30px;
+}
+
+.messages .userMsg{
+    clear: both;
+    background-color: #181818;
+    padding: 15px;
+    border-radius: 30px;
+    max-width: 60vw;
+    align-self: flex-end;
+    min-width: 20vw;
+}
+
+.messages .responseMsg{
+    clear: both;
+    background-color: #181818;
+    padding: 15px;
+    border-radius: 30px;
+    max-width: 60vw;
+    align-self: flex-start;
+    min-width: 20vw;
+    margin-top: 15px;
+}
+
+/* Chat messages container */
+.messages {
+    max-height: calc(70vh - 100px); /* Adjust the height dynamically */
+    overflow-y: auto; /* Add vertical scroll for overflow */
+    padding: 10px 20px; /* Add some padding for better spacing */
+    word-wrap: break-word; /* Ensure long words break properly */
+  }
+  
+  /* Individual message styles */
+  .userMsg, .responseMsg {
+    margin: 10px 0; /* Add spacing between messages */
+    padding: 10px 15px; /* Add padding inside the message */
+    border-radius: 8px; /* Make the messages rounded */
+    max-width: 75%; /* Limit the width of the message bubble */
+    line-height: 1.5; /* Improve readability */
+  }
+  
+  .userMsg {
+    background-color: #2d2d2d; /* Dark background for user messages */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .responseMsg {
+    background-color: #1e1e1e; /* Slightly lighter background for bot messages */
+    text-align: left; /* Align text to the left */
+  }
+
+  @media (max-width: 768px) {
+    .messages {
+      max-height: calc(60vh - 50px); /* Adjust chat height for mobile */
+      padding: 5px; /* Smaller padding */
+    }
+  
+    .userMsg, .responseMsg {
+      padding: 8px; /* Smaller padding for messages */
+      font-size: 14px; /* Smaller text size */
+      max-width: 85%; /* Further reduce message width */
+    }
+  
+    .header {
+      padding: 10px; /* Reduce padding for the header */
+      font-size: 18px; /* Adjust font size */
+    }
+  
+    .boxes {
+      grid-template-columns: 1fr 1fr; /* Show two cards per row */
+      gap: 8px; /* Reduce gap between cards */
+    }
+  
+    .bottom input {
+      font-size: 14px; /* Adjust font size for input */
+      padding: 8px;
+    }
+  }
